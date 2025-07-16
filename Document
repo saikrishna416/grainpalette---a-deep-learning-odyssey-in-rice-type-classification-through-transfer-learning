@@ -1,1 +1,59 @@
+Tomato Leaf Disease Detection - Project Documentation
+1. Introduction
+This project is a web-based Tomato Leaf Disease Detection System developed using a Convolutional Neural Network (CNN) model integrated into a Flask web application. The user uploads an image of a tomato leaf, and the system predicts the disease present in the leaf.
+2. Project Structure
+The following is the folder structure of the project:
 
+Tomato-Leaf-Project/
+│
+├── app.py                         # Main Flask backend
+├── requirements.txt               # Required Python libraries
+├── README.md                      # Project documentation
+│
+├── Training/                      # Contains the trained CNN model
+│   └── tomato_leaf_disease_model.h5
+│
+├── static/                        # Static files
+│   ├── uploads/                   # Uploaded images
+│   └── style.css                  # CSS styling
+│
+├── templates/                     # HTML templates
+│   ├── index.html                 # Home page (upload form)
+│   └── result.html                # Result page (shows prediction)
+
+
+3. Description of Project Files
+app.py
+Main application file for Flask. Loads the CNN model, processes uploaded images, predicts disease, and renders HTML templates.
+Training/tomato_leaf_disease_model.h5
+Pre-trained CNN model saved using Keras. Used for inference (prediction) in the Flask app.
+templates/index.html
+Homepage that provides an upload form for users to submit tomato leaf images.
+templates/result.html
+Displays the prediction result along with the uploaded image.
+static/uploads/
+Stores uploaded images temporarily to be displayed back to the user.
+static/style.css
+Contains CSS styles for HTML pages. Optional but improves UI presentation.
+requirements.txt
+Lists all Python libraries required to run the project. Can be installed using pip.
+README.md
+Contains project overview, setup instructions, model classes, and usage details.
+4. Supported Disease Classes
+The model is trained to detect the following tomato leaf conditions:
+Tomato___Bacterial_spot
+Tomato___Early_blight
+Tomato___Late_blight
+Tomato___Leaf_Mold
+Tomato___Septoria_leaf_spot
+Tomato___Spider_mites
+Tomato___Target_Spot
+Tomato___Tomato_YellowLeaf_Curl_Virus
+Tomato___Tomato_mosaic_virus
+Tomato___healthy
+5. How to Run the Project
+1. Clone the project folder.
+2. Create and activate a virtual environment (optional but recommended).
+3. Install dependencies using: pip install -r requirements.txt
+4. Run the Flask application using: python app.py
+5. Open a browser and navigate to: http://localhost:7000
